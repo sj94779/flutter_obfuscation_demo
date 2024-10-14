@@ -70,6 +70,10 @@ Now, the debug symbols map are used internally by the Play Console to resymboliz
 names so you can debug it easily.
 
 
+older post
+How to obfuscate flutter apps (answer with 9 upvote describe for android and ios correctly)
+https://stackoverflow.com/questions/50542764/how-to-obfuscate-flutter-apps
+
 What symbols to upload to Play Store with Flutter and native obfuscation?
 https://stackoverflow.com/questions/70404922/what-symbols-to-upload-to-play-store-with-flutter-and-native-obfuscation
 
@@ -80,6 +84,3 @@ https://stackoverflow.com/questions/73967283/how-to-provide-symbols-for-obfuscat
 firebase crashlytics support for flutter obfuscation
 https://firebase.google.com/docs/crashlytics/get-deobfuscated-reports?platform=flutter#android-split-debug-info
 
-older post
-How to obfuscate flutter apps
-https://stackoverflow.com/questions/50542764/how-to-obfuscate-flutter-apps
