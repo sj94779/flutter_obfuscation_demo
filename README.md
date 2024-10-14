@@ -30,6 +30,7 @@ Flutter's code obfuscation works only on a release build.
 
 Command to create obfuscated build for android
 flutter build apk --obfuscate --split-debug-info=build/app/outputs/symbols  --extra-gen-snapshot-options=--save-obfuscation-map=build/app/outputs/map
+flutter clean
 flutter build appbundle --obfuscate --split-debug-info=build/app/outputs/symbols  --extra-gen-snapshot-options=--save-obfuscation-map=build/app/outputs/map
 
 
@@ -68,8 +69,9 @@ The mapping is encoded as a JSON array [original_name_0, obfuscated_name_0, orig
 
 
 To create signed apk and signed bundle using command so that you can use offuscate command as well
-https://stackoverflow.com/questions/18328730/how-to-create-a-release-signed-apk-file-using-gradle
 https://medium.com/@psyanite/how-to-sign-and-release-your-flutter-app-ed5e9531c2ac
+
+
 
 For Android, use the following command in your terminal:
 flutter build apk --obfuscate --split-debug-info=/path/to/directory/
