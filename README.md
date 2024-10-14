@@ -31,9 +31,23 @@ Flutter's code obfuscation works only on a release build.
 Command to create obfuscated build for android
 flutter build apk --obfuscate --split-debug-info=build/app/outputs/symbols  --extra-gen-snapshot-options=--save-obfuscation-map=build/app/outputs/map
 
+Several files will be created such as build/app/outputs/symbols /app.android-arm64.symbols,app.android-arm.symbols,app.android-x64.symbols
+
 for ios product/scheme/edit scheme to release for which provisioning profile needed
 Command to create obfuscated build for ios
 flutter build ios --obfuscate --split-debug-info=build/app/outputs/symbols  --extra-gen-snapshot-options=--save-obfuscation-map=build/app/outputs/map
+
+t creates file build/app/outputs/symbols/app.ios-arm64.symbols
+This will also modify ios/Flutter/Generated.xcconfig to include
+DART_OBFUSCATION=true
+SPLIT_DEBUG_INFO=misc/mapping/1.0.0
+
+Use Xcode menu: Product > Archive which will uses Release.xcconfig which includes updated Generated.xcconfig
+#include "Generated.xcconfig"
+
+So your uploaded Archive will now be obfuscated (you don't need to make changes to Release.xcconfig)
+
+
 
 
 --obfuscate which enables obfuscation
