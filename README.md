@@ -104,3 +104,24 @@ https://stackoverflow.com/questions/73967283/how-to-provide-symbols-for-obfuscat
 firebase crashlytics support for flutter obfuscation
 https://firebase.google.com/docs/crashlytics/get-deobfuscated-reports?platform=flutter#android-split-debug-info
 
+apk decompile/ reverse engineering/fetch source code from apk
+Steps to follow:
+1) get dex tools
+2) goto folder in command prompt
+3) run following commands:
+   chmod u+x d2j_invoke.sh
+   chmod u+x d2j-dex2jar.sh
+4) place .apk file in dex tools folder
+5) run following command:
+   sh d2j-dex2jar.sh -f -o output_jar.jar my_app.apk
+6) a jar file will be created 
+7) now open jd-gui tool 
+8) open that jar in this tool
+
+
+https://programmerworld.co/android/how-to-get-source-code-from-apk-file-of-an-android-app-api-34android-14/
+to solve command not found error:
+https://stackoverflow.com/questions/29744010/apk-decompile-error-d2j-dex2jar-command-not-found
+http://java-decompiler.github.io
+
+
